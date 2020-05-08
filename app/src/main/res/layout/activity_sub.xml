@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubActivity"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="32dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp">
+
+    <Button
+        android:id="@+id/btn_sub"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:text="연애 밸런스"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_sub1"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:text="주어 없는 밸런스"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_sub2"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:text="취준생 밸런스"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_sub3"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:text="이상형 밸런스"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_sub4"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:text="동생, 친구 밸런스"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp" />
+</LinearLayout>
