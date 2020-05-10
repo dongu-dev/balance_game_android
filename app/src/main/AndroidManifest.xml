@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.balance">
 
-    <!-- 안드로이드 시작화면 띄우기 -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,18 +12,20 @@
 
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:screenOrientation="fullSensor">
-
+            android:screenOrientation="fullSensor"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".SubActivity"></activity>
-        <activity android:name=".ExplainActivity"></activity>
-        <activity android:name=".love.LoveActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SubActivity" />
+        <activity android:name=".ExplainActivity" />
+        <activity android:name=".love.LoveActivity" />
+        <activity android:name=".love.LoveActivity_one" />
+        <activity android:name=".love.LoveActivity_seven" />
     </application>
+
 </manifest>

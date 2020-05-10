@@ -3,58 +3,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SubActivity"
-    android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:paddingTop="32dp"
-    android:paddingRight="16dp"
-    android:paddingBottom="16dp">
+    tools:context=".StatisticsActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:background="@drawable/bg_custom_text"
+        android:gravity="center"
+        android:text="통계표"
+        android:textSize="30dp" />
 
     <Button
-        android:id="@+id/btn_sub"
+        android:id="@+id/btn_sa"
         android:layout_width="330dp"
-        android:layout_height="70dp"
+        android:layout_height="75dp"
         android:layout_gravity="center"
-        android:text="첫번째 밸런스"
+        android:layout_marginTop="30dp"
         android:background="@drawable/button"
+        android:text="첫번째 밸런스 결과"
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/btn_sub1"
+        android:id="@+id/btn_sa2"
         android:layout_width="330dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
-        android:text="두번째 밸런스"
-        android:background="@drawable/button"
-        android:layout_marginTop="20dp"
-        android:textSize="30sp" />
-
-    <Button
-        android:id="@+id/btn_sub2"
-        android:layout_width="330dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:text="세번째 밸런스"
+        android:text="두번째 밸런스 결과 "
         android:background="@drawable/button"
         android:layout_marginTop="20dp"
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/btn_sub3"
+        android:id="@+id/btn_sa3"
         android:layout_width="330dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
-        android:text="네번째 밸런스"
+        android:text="세번째 밸런스 결과"
         android:background="@drawable/button"
         android:layout_marginTop="20dp"
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/btn_sub4"
+        android:id="@+id/btn_sa4"
         android:layout_width="330dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
-        android:text="주어 없는 밸런스"
+        android:text="네번째 밸런스 결과"
+        android:background="@drawable/button"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_sa5"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:text="주어 없는 밸런스 결과"
         android:background="@drawable/button"
         android:layout_marginTop="20dp"
         android:textSize="30sp" />
