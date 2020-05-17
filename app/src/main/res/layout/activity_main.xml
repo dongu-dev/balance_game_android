@@ -32,10 +32,10 @@
     <Button
         android:id="@+id/btn_main2"
         android:layout_width="330dp"
-        android:layout_height="70dp"
+        android:layout_height="75dp"
         android:layout_gravity="center"
-        android:background="@drawable/button"
         android:layout_marginTop="20dp"
-        android:textSize="30sp"
-        android:text="투표 결과" />
+        android:background="@drawable/button"
+        android:text="득표 결과"
+        android:textSize="30sp" />
 </LinearLayout>

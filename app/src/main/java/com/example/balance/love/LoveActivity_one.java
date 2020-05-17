@@ -1,6 +1,7 @@
 package com.example.balance.love;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -14,6 +15,10 @@ public class LoveActivity_one extends AppCompatActivity {
 
     private ImageButton imageButton3;
     private ImageButton imageButton4;
+    private int voteResult3;
+    private int voteResult4;
+    private String str_voteResult3;
+    private String str_voteResult4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +27,24 @@ public class LoveActivity_one extends AppCompatActivity {
 
         imageButton3 = findViewById(R.id.imageButton3);
         imageButton4 = findViewById(R.id.imageButton4);
+        voteResult3 = 0;
+        voteResult4 = 0;
 
         imageButton3.setOnClickListener(new View.OnClickListener() {
             // onClick 을 실행했을 때
             @Override
             public void onClick(View v) {
+
+                for(int i=0; i < voteResult3; i++) {
+                    voteResult3 = voteResult3 + 1;
+                }
+
+                str_voteResult3 = Integer.toString(voteResult3);
+
+                SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                SharedPreferences.Editor ed = pref.edit();
+                ed.putString("str_voteResult3", str_voteResult3);
+                ed.commit();
 
                 imageButton3.setImageResource(R.drawable.love3_color);
 
@@ -47,6 +65,17 @@ public class LoveActivity_one extends AppCompatActivity {
             // onClick 을 실행했을 때
             @Override
             public void onClick(View v) {
+
+                for(int i=0; i < voteResult4; i++) {
+                    voteResult4 = voteResult4 + 1;
+                }
+
+                str_voteResult4 = Integer.toString(voteResult4);
+
+                SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                SharedPreferences.Editor ed = pref.edit();
+                ed.putString("str_voteResult4", str_voteResult4);
+                ed.commit();
 
                 imageButton4.setImageResource(R.drawable.love4_color);
 

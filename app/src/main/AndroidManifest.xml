@@ -23,9 +23,11 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SubActivity" />
         <activity android:name=".ExplainActivity" />
+        <activity android:name=".StatisticsActivity" />
         <activity android:name=".love.LoveActivity" />
         <activity android:name=".love.LoveActivity_one" />
         <activity android:name=".love.LoveActivity_seven" />
+        <activity android:name=".love.LoveActivity_res1st" />
     </application>
 
 </manifest>

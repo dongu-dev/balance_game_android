@@ -1,6 +1,6 @@
 package com.example.balance.love;
 
-import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -9,6 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.balance.R;
 
 public class LoveActivity_res1st extends AppCompatActivity {
+
+    private TextView res_textView3;
+    private TextView res_textView4;
+    private String str_voteResult3_res;
+    private String str_voteResult4_res;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,15 +22,14 @@ public class LoveActivity_res1st extends AppCompatActivity {
 
         setTitle("결과");
 
-        //LoveActivity 화면에서 전달한 데이터 받기
-        Intent intent = getIntent();
-        int[] voteResult = intent.getIntArrayExtra("voteCount");
-        String[] imageName = intent.getStringArrayExtra("imgName");
+        res_textView3 = findViewById(R.id.textView3);
+        res_textView4 = findViewById(R.id.textView4);
 
-        //초기값 설정 ------------------------------------------------------
-        TextView[] tv = new TextView[imageName.length];
+        SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+        str_voteResult3_res = pref.getString("str_voteResult3", "0");
+        str_voteResult4_res = pref.getString("str_voteResult4", "0");
 
-        Integer[] tvID = {
-        };
+        res_textView3.setText(str_voteResult3_res + "표");
+        res_textView4.setText(str_voteResult4_res + "표");
     }
 }

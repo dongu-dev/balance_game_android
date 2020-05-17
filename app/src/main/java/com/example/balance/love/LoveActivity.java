@@ -3,18 +3,23 @@ package com.example.balance.love;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ImageButton;
+import android.content.SharedPreferences;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.balance.R;
-import com.example.balance.StatisticsActivity;
 
 public class LoveActivity extends AppCompatActivity {
 
     private ImageButton imageButton1;
     private ImageButton imageButton2;
+    private int voteResult1=0;
+    private int voteResult2=0;
+    private String str_voteResult1;
+    private String str_voteResult2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,17 @@ public class LoveActivity extends AppCompatActivity {
             // onClick 을 실행했을 때
             @Override
             public void onClick(View v) {
+
+                for(int i=0; i < voteResult1; i++) {
+                    voteResult1 = voteResult1 + 1;
+                }
+
+                str_voteResult1 = Integer.toString(voteResult1);
+
+                SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                SharedPreferences.Editor ed = pref.edit();
+                ed.putString("str_voteResult1", str_voteResult1);
+                ed.commit();
 
                 imageButton1.setImageResource(R.drawable.love1_color);
 
@@ -49,6 +65,17 @@ public class LoveActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                for(int i=0; i < voteResult2; i++) {
+                    voteResult2 = voteResult2 + 1;
+                }
+
+                str_voteResult2 = Integer.toString(voteResult2);
+
+                SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                SharedPreferences.Editor ed = pref.edit();
+                ed.putString("str_voteResult2", str_voteResult2);
+                ed.commit();
+
                 imageButton2.setImageResource(R.drawable.love2_color);
 
                 new Handler().postDelayed(new Runnable()
@@ -64,31 +91,6 @@ public class LoveActivity extends AppCompatActivity {
             }
         });
 
-        // 투표카운트 초기값 설정
-        final int[] voteCount = {0,0};
-        ImageButton[] imageButton = new ImageButton[2];
-        Integer[] imageID = {
-                R.id.imageButton1, R.id.imageButton2
-        };
-        final String[] imgName = {
-                "전 (남/여)친",
-                "전 전(남/여)친"
-        };
 
-        // 각 이미지버튼에 ClickListener 정의
-        for(int i = 0; i < imageID.length; i++) {
-            final int idx = i; // icx 변수 값이 변하지 않도록 final 선언
-            imageButton[i] = (ImageButton)findViewById(imageID[i]);
-            imageButton[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //intent 선언
-                    Intent intent = new Intent(getApplicationContext(), StatisticsActivity.class);
-                    //데이터 설정
-                    intent.putExtra("voteCount", voteCount);
-                    intent.putExtra("imgName", imgName);
-                }
-            });
-        }
     }
 }
