@@ -28,6 +28,7 @@
         <activity android:name=".love.LoveActivity_one" />
         <activity android:name=".love.LoveActivity_seven" />
         <activity android:name=".love.LoveActivity_res1st" />
+        <activity android:name=".love.LoveActivity_res" />
     </application>
 
 </manifest>
