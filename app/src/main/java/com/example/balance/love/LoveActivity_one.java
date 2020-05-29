@@ -17,8 +17,6 @@ public class LoveActivity_one extends AppCompatActivity {
     private ImageButton imageButton4;
     private int voteResult3;
     private int voteResult4;
-    private String str_voteResult3;
-    private String str_voteResult4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +33,20 @@ public class LoveActivity_one extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                for(int i=0; i < voteResult3; i++) {
-                    voteResult3 = voteResult3 + 1;
-                }
-
-                str_voteResult3 = Integer.toString(voteResult3);
-
                 SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                // 득표수 계산 로직(이미지버튼 클릭시 값 1씩 증가)
+                voteResult3 = pref.getInt("voteResult3_res",0);
+
+                if(voteResult3 == 0) {
+                    voteResult3 = 1;
+                } else {
+                    voteResult3 ++;
+                }
+                // -- 득표수 계산 로직 끝 --
+
+                // 득표 수 저장하기
                 SharedPreferences.Editor ed = pref.edit();
-                ed.putString("str_voteResult3", str_voteResult3);
+                ed.putInt("voteResult3_res", voteResult3);
                 ed.commit();
 
                 imageButton3.setImageResource(R.drawable.love3_color);
@@ -54,7 +57,7 @@ public class LoveActivity_one extends AppCompatActivity {
                     public void run()
                     {
                         //여기에 딜레이 후 시작할 작업들을 입력
-                        Intent intent = new Intent(LoveActivity_one.this , LoveActivity_seven.class);
+                        Intent intent = new Intent(LoveActivity_one.this , LoveActivity_two.class);
                         startActivity(intent); // 액티비티 이동하는 구문이다.
                     }
                 }, 2000);// 2초 정도 딜레이를 준 후 시작
@@ -66,15 +69,20 @@ public class LoveActivity_one extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                for(int i=0; i < voteResult4; i++) {
-                    voteResult4 = voteResult4 + 1;
-                }
-
-                str_voteResult4 = Integer.toString(voteResult4);
-
                 SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                // 득표수 계산 로직(이미지버튼 클릭시 값 1씩 증가)
+                voteResult4 = pref.getInt("voteResult4_res",0);
+
+                if(voteResult4 == 0) {
+                    voteResult4 = 1;
+                } else {
+                    voteResult4 ++;
+                }
+                // -- 득표수 계산 로직 끝 --
+
+                // 득표 수 저장하기
                 SharedPreferences.Editor ed = pref.edit();
-                ed.putString("str_voteResult4", str_voteResult4);
+                ed.putInt("voteResult4_res", voteResult4);
                 ed.commit();
 
                 imageButton4.setImageResource(R.drawable.love4_color);
@@ -85,7 +93,7 @@ public class LoveActivity_one extends AppCompatActivity {
                     public void run()
                     {
                         //여기에 딜레이 후 시작할 작업들을 입력
-                        Intent intent = new Intent(LoveActivity_one.this , LoveActivity_seven.class);
+                        Intent intent = new Intent(LoveActivity_one.this , LoveActivity_two.class);
                         startActivity(intent); // 액티비티 이동하는 구문이다.
                     }
                 }, 2000);// 2초 정도 딜레이를 준 후 시작

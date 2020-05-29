@@ -36,7 +36,7 @@ public class LoveActivity extends AppCompatActivity {
 
                 SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
                 // 득표수 계산 로직(이미지버튼 클릭시 값 1씩 증가)
-                voteResult1 = pref.getInt("int_voteResult1",0);
+                voteResult1 = pref.getInt("voteResult1_res",0);
 
                 if(voteResult1 == 0) {
                     voteResult1 = 1;
@@ -47,7 +47,7 @@ public class LoveActivity extends AppCompatActivity {
 
                 // 득표 수 저장하기
                 SharedPreferences.Editor ed = pref.edit();
-                ed.putInt("int_voteResult1", voteResult1);
+                ed.putInt("voteResult1_res", voteResult1);
                 ed.commit();
 
                 imageButton1.setImageResource(R.drawable.love1_color);
@@ -72,7 +72,7 @@ public class LoveActivity extends AppCompatActivity {
 
                 SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
                 // 득표수 계산 로직(이미지버튼 클릭시 값 1씩 증가)
-                voteResult2 = pref.getInt("int_voteResult2",0);
+                voteResult2 = pref.getInt("voteResult2_res",0);
 
                 if(voteResult2 == 0) {
                     voteResult2 = 1;
@@ -82,7 +82,7 @@ public class LoveActivity extends AppCompatActivity {
                 // -- 득표수 계산 로직 끝 --
 
                 SharedPreferences.Editor ed = pref.edit();
-                ed.putInt("int_voteResult2", voteResult2);
+                ed.putInt("voteResult2_res", voteResult2);
                 ed.commit();
 
                 imageButton2.setImageResource(R.drawable.love2_color);

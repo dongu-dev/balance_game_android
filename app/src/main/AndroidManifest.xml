@@ -26,6 +26,11 @@
         <activity android:name=".StatisticsActivity" />
         <activity android:name=".love.LoveActivity" />
         <activity android:name=".love.LoveActivity_one" />
+        <activity android:name=".love.LoveActivity_two" />
+        <activity android:name=".love.LoveActivity_three" />
+        <activity android:name=".love.LoveActivity_four" />
+        <activity android:name=".love.LoveActivity_five" />
+        <activity android:name=".love.LoveActivity_six" />
         <activity android:name=".love.LoveActivity_seven" />
         <activity android:name=".love.LoveActivity_res1st" />
         <activity android:name=".love.LoveActivity_res" />
