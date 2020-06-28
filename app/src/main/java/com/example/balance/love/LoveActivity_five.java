@@ -17,8 +17,6 @@ public class LoveActivity_five extends AppCompatActivity {
     private ImageButton imageButton12;
     private int voteResult11;
     private int voteResult12;
-    private String str_voteResult11;
-    private String str_voteResult12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +33,20 @@ public class LoveActivity_five extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                for(int i=0; i < voteResult11; i++) {
-                    voteResult11 = voteResult11 + 1;
-                }
-
-                str_voteResult11 = Integer.toString(voteResult11);
-
                 SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                // 득표수 계산 로직(이미지버튼 클릭시 값 1씩 증가)
+                voteResult11 = pref.getInt("voteResult11_res",0);
+
+                if(voteResult11 == 0) {
+                    voteResult11 = 1;
+                } else {
+                    voteResult11 ++;
+                }
+                // -- 득표수 계산 로직 끝 --
+
+                // 득표 수 저장하기
                 SharedPreferences.Editor ed = pref.edit();
-                ed.putString("str_voteResult11", str_voteResult11);
+                ed.putInt("voteResult11_res", voteResult11);
                 ed.commit();
 
                 imageButton11.setImageResource(R.drawable.love11_color);
@@ -66,19 +69,23 @@ public class LoveActivity_five extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                for(int i=0; i < voteResult12; i++) {
-                    voteResult12 = voteResult12 + 1;
-                }
-
-                str_voteResult12 = Integer.toString(voteResult12);
-
                 SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                // 득표수 계산 로직(이미지버튼 클릭시 값 1씩 증가)
+                voteResult12 = pref.getInt("voteResult12_res",0);
+
+                if(voteResult12 == 0) {
+                    voteResult12 = 1;
+                } else {
+                    voteResult12 ++;
+                }
+                // -- 득표수 계산 로직 끝 --
+
+                // 득표 수 저장하기
                 SharedPreferences.Editor ed = pref.edit();
-                ed.putString("str_voteResult12", str_voteResult12);
+                ed.putInt("voteResult12_res", voteResult12);
                 ed.commit();
 
                 imageButton12.setImageResource(R.drawable.love12_color);
-
 
                 new Handler().postDelayed(new Runnable()
                 {

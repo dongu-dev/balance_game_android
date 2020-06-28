@@ -35,15 +35,20 @@ public class LoveActivity_three extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                for(int i=0; i < voteResult7; i++) {
-                    voteResult7 = voteResult7 + 1;
-                }
-
-                str_voteResult7 = Integer.toString(voteResult7);
-
                 SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                // 득표수 계산 로직(이미지버튼 클릭시 값 1씩 증가)
+                voteResult7 = pref.getInt("voteResult7_res",0);
+
+                if(voteResult7 == 0) {
+                    voteResult7 = 1;
+                } else {
+                    voteResult7 ++;
+                }
+                // -- 득표수 계산 로직 끝 --
+
+                // 득표 수 저장하기
                 SharedPreferences.Editor ed = pref.edit();
-                ed.putString("str_voteResult7", str_voteResult7);
+                ed.putInt("voteResult7_res", voteResult7);
                 ed.commit();
 
                 imageButton7.setImageResource(R.drawable.love7_color);
@@ -66,19 +71,23 @@ public class LoveActivity_three extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                for(int i=0; i < voteResult8; i++) {
-                    voteResult8 = voteResult8 + 1;
-                }
-
-                str_voteResult8 = Integer.toString(voteResult8);
-
                 SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+                // 득표수 계산 로직(이미지버튼 클릭시 값 1씩 증가)
+                voteResult8 = pref.getInt("voteResult8_res",0);
+
+                if(voteResult8 == 0) {
+                    voteResult8 = 1;
+                } else {
+                    voteResult8 ++;
+                }
+                // -- 득표수 계산 로직 끝 --
+
+                // 득표 수 저장하기
                 SharedPreferences.Editor ed = pref.edit();
-                ed.putString("str_voteResult8", str_voteResult8);
+                ed.putInt("voteResult8_res", voteResult8);
                 ed.commit();
 
                 imageButton8.setImageResource(R.drawable.love8_color);
-
 
                 new Handler().postDelayed(new Runnable()
                 {

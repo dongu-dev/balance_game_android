@@ -44,7 +44,7 @@ public class LoveActivity_res1st extends AppCompatActivity {
             // onClick 을 실행했을 때
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoveActivity_res1st.this , LoveActivity_res.class);
+                Intent intent = new Intent(LoveActivity_res1st.this , LoveActivity_res2nd.class);
                 startActivity(intent); // 액티비티 이동하는 구문이다.
             }
         });
