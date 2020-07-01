@@ -64,8 +64,7 @@ public class LoveActivity_seven extends AppCompatActivity {
                 imageButton15.setImageResource(R.drawable.love15_color);
 
                 Toast.makeText(getApplicationContext(), "투표가 끝났으므로 메인으로 이동합니다.",Toast.LENGTH_SHORT).show();
-
-                mInterstitialAd = new InterstitialAd(this);
+                
                 mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
 
                 new Handler().postDelayed(new Runnable()
