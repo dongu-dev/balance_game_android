@@ -37,8 +37,8 @@ public class FriendsActivity_res8th extends AppCompatActivity {
         voteResult_friends15_res = pref.getInt("voteResult_friends15_res", 0);
         voteResult_friends16_res = pref.getInt("voteResult_friends16_res", 0);
 
-        res_textView_friends15.setText(res_textView_friends15 + "표");
-        res_textView_friends16.setText(res_textView_friends16 + "표");
+        res_textView_friends15.setText(voteResult_friends15_res + "표");
+        res_textView_friends16.setText(voteResult_friends16_res + "표");
 
         // btn_sa 를 클릭했을 때 onClick 메소드를 실행을 시켜라
         res_button_friends14.setOnClickListener(new View.OnClickListener() {

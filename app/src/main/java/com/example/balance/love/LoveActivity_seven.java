@@ -1,6 +1,5 @@
 package com.example.balance.love;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -8,11 +7,16 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
+import com.google.android.gms.ads.InterstitialAd;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.balance.MainActivity;
 import com.example.balance.R;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 
 public class LoveActivity_seven extends AppCompatActivity {
 
@@ -20,11 +24,18 @@ public class LoveActivity_seven extends AppCompatActivity {
     private ImageButton imageButton16;
     private int voteResult15;
     private int voteResult16;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_love_seven);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
 
         imageButton15 = findViewById(R.id.imageButton15);
         imageButton16 = findViewById(R.id.imageButton16);
@@ -53,6 +64,9 @@ public class LoveActivity_seven extends AppCompatActivity {
                 imageButton15.setImageResource(R.drawable.love15_color);
 
                 Toast.makeText(getApplicationContext(), "투표가 끝났으므로 메인으로 이동합니다.",Toast.LENGTH_SHORT).show();
+
+                mInterstitialAd = new InterstitialAd(this);
+                mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
 
                 new Handler().postDelayed(new Runnable()
                 {

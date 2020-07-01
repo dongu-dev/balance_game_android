@@ -7,7 +7,10 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.balance.friends.FriendsActivity_res1st;
 import com.example.balance.love.LoveActivity_res;
+import com.example.balance.money.MoneyActivity_res1st;
+import com.example.balance.subject.SubjectActivity_res1st;
 
 public class StatisticsActivity extends AppCompatActivity {
 
@@ -44,7 +47,7 @@ public class StatisticsActivity extends AppCompatActivity {
             // onClick 을 실행했을 때
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StatisticsActivity.this , LoveActivity_res.class);
+                Intent intent = new Intent(StatisticsActivity.this , FriendsActivity_res1st.class);
                 startActivity(intent); // 액티비티 이동하는 구문이다.
             }
         });
@@ -54,7 +57,7 @@ public class StatisticsActivity extends AppCompatActivity {
             // onClick 을 실행했을 때
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StatisticsActivity.this , LoveActivity_res.class);
+                Intent intent = new Intent(StatisticsActivity.this , MoneyActivity_res1st.class);
                 startActivity(intent); // 액티비티 이동하는 구문이다.
             }
         });
@@ -74,7 +77,7 @@ public class StatisticsActivity extends AppCompatActivity {
             // onClick 을 실행했을 때
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StatisticsActivity.this , LoveActivity_res.class);
+                Intent intent = new Intent(StatisticsActivity.this , SubjectActivity_res1st.class);
                 startActivity(intent); // 액티비티 이동하는 구문이다.
             }
         });

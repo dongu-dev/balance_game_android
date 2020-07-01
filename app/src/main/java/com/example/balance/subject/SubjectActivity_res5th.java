@@ -23,7 +23,7 @@ public class SubjectActivity_res5th extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_subject_res4th);
+        setContentView(R.layout.activity_subject_res5th);
 
         setTitle("결과");
 

@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2447865095705973-2190737509"/>
+
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="fullSensor"
@@ -48,6 +52,14 @@
         <activity android:name=".friends.FriendsActivity_six" />
         <activity android:name=".friends.FriendsActivity_seven" />
         <activity android:name=".friends.FriendsActivity_eight" />
+        <activity android:name=".friends.FriendsActivity_res1st" />
+        <activity android:name=".friends.FriendsActivity_res2nd" />
+        <activity android:name=".friends.FriendsActivity_res3rd" />
+        <activity android:name=".friends.FriendsActivity_res4th" />
+        <activity android:name=".friends.FriendsActivity_res5th" />
+        <activity android:name=".friends.FriendsActivity_res6th" />
+        <activity android:name=".friends.FriendsActivity_res7th" />
+        <activity android:name=".friends.FriendsActivity_res8th" />
         <activity android:name=".money.MoneyActivity_one" />
         <activity android:name=".money.MoneyActivity_two" />
         <activity android:name=".money.MoneyActivity_three" />
@@ -56,6 +68,29 @@
         <activity android:name=".money.MoneyActivity_six" />
         <activity android:name=".money.MoneyActivity_seven" />
         <activity android:name=".money.MoneyActivity_eight" />
+        <activity android:name=".money.MoneyActivity_res1st" />
+        <activity android:name=".money.MoneyActivity_res2nd" />
+        <activity android:name=".money.MoneyActivity_res3rd" />
+        <activity android:name=".money.MoneyActivity_res4th" />
+        <activity android:name=".money.MoneyActivity_res5th" />
+        <activity android:name=".money.MoneyActivity_res6th" />
+        <activity android:name=".money.MoneyActivity_res7th" />
+        <activity android:name=".money.MoneyActivity_res8th" />
+        <activity android:name=".subject.SubjectActivity_one" />
+        <activity android:name=".subject.SubjectActivity_two" />
+        <activity android:name=".subject.SubjectActivity_three" />
+        <activity android:name=".subject.SubjectActivity_four" />
+        <activity android:name=".subject.SubjectActivity_five" />
+        <activity android:name=".subject.SubjectActivity_six" />
+        <activity android:name=".subject.SubjectActivity_seven" />
+        <activity android:name=".subject.SubjectActivity_eight" />
+        <activity android:name=".subject.SubjectActivity_res1st" />
+        <activity android:name=".subject.SubjectActivity_res2nd" />
+        <activity android:name=".subject.SubjectActivity_res3rd" />
+        <activity android:name=".subject.SubjectActivity_res4th" />
+        <activity android:name=".subject.SubjectActivity_res5th" />
+        <activity android:name=".subject.SubjectActivity_res6th" />
+        <activity android:name=".subject.SubjectActivity_res7th" />
+        <activity android:name=".subject.SubjectActivity_res8th" />
     </application>
-
 </manifest>
